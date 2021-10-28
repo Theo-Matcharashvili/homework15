@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript</title>
+	</head>
+	<body>
+		<h5>1. const currentDay = new Date().getDay(); currentDay ცვლადი გვაძლევს კვირის დღეს რიცხვითი სახით 0 - არის კვირა 1 - არის ორშაბათი და ასე შემდეგ. 0 - 6 ამდე რიცხვს აბრუნებს სადაც 6 არის შაბათი , დავწეროთ switch სადაც შევამოწმებთ currentDay-ს და 0 ის შემთხვევაში console.log ში გამოვიტანთ სიტყვას კვირას 1 ის შემთხვევაში ორშაბათს და ასე შემდეგ 6 ამდე.
+		</h5>
+		<p id="today"></p>
+		<p id="day"></p>
+		<h5>2. დაწერეთ for ციკლი 0 დან 100 - მდე console.log ში დაბეჭდეთ ინდექსი i</h5>
+		<p id="num"></p>
+
+		<p id="num2"></p>
+		<script type="text/javascript">
+		//task 1
+			let currentDay 
+			switch ( new Date().getDay()){
+				case 0:
+					currentDay="კვირა";
+					break
+				case 1 :
+					currentDay="ორშაბათი";
+					break
+				case 2 :
+					currentDay="სამშაბათი";
+					break
+				case 3 :
+					currentDay="ოთხშაბათი";
+					break
+				case 4 :
+					currentDay="ხუთშაბათი";
+					break
+				case 5 :
+					currentDay= "პარასკევი";
+					break
+				case 6 :
+					currentDay= "შაბათი";
+					break
+			}
+					
+			document.getElementById("today").innerHTML = "დღეს არის " + currentDay;
+// we could also get the same result with this code
+			const d = new Date();
+			const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			document.getElementById("day").innerHTML = days[d.getDay()];
+		//task 2
+
+			for (let i = 0; i<100; i++) {
+				document.getElementById("num").innerHTML= i;
+				console.log(i)
+			}
+
+
+
+		// task 3
+			let i=0;
+			while(i<50){
+				document.getElementById("num2").innerHTML =i;
+				i++;
+				console.log(i)
+			}
+		</script>
+		 	
+
+	</body>
+</html>
